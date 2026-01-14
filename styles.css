@@ -1,0 +1,426 @@
+:root{
+  --bg: #0b0f14;
+  --panel: rgba(255,255,255,.06);
+  --panel2: rgba(255,255,255,.09);
+  --text: rgba(255,255,255,.92);
+  --muted: rgba(255,255,255,.70);
+  --line: rgba(255,255,255,.14);
+  --accent: #7CFF6B;      /* verde “GTA” */
+  --accent2: #00D4FF;     /* azul neón */
+  --shadow: 0 18px 45px rgba(0,0,0,.55);
+  --radius: 18px;
+}
+
+*{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(1200px 800px at 20% -10%, rgba(124,255,107,.20), transparent 60%),
+    radial-gradient(900px 700px at 90% 0%, rgba(0,212,255,.18), transparent 55%),
+    linear-gradient(180deg, #070a0f, var(--bg) 40%, #070a0f 100%);
+}
+
+.container{
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+.header{
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(10,14,20,.72);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+}
+
+.nav{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding: 12px 0;
+  gap: 14px;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  text-decoration:none;
+  color: var(--text);
+}
+.brand__logo{
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+}
+.brand__name{
+  font-weight: 700;
+  letter-spacing: .2px;
+}
+
+.menu{
+  display:flex;
+  align-items:center;
+  gap: 14px;
+}
+.menu a{
+  text-decoration:none;
+  color: var(--muted);
+  font-weight: 600;
+  padding: 10px 10px;
+  border-radius: 12px;
+  transition: .2s ease;
+}
+.menu a:hover{
+  color: var(--text);
+  background: var(--panel);
+}
+
+.hero{
+  padding: 36px 0 18px;
+}
+.hero__grid{
+  display:grid;
+  grid-template-columns: 1.3fr .9fr;
+  gap: 18px;
+  align-items: stretch;
+}
+
+.badge{
+  display:inline-block;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: .5px;
+  color: rgba(255,255,255,.85);
+  background: linear-gradient(90deg, rgba(124,255,107,.18), rgba(0,212,255,.16));
+  border: 1px solid var(--line);
+  padding: 8px 10px;
+  border-radius: 999px;
+}
+
+h1{
+  margin: 12px 0 8px;
+  font-size: clamp(28px, 4vw, 46px);
+  line-height: 1.05;
+}
+.accent{
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.lead{
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0 0 16px;
+  max-width: 58ch;
+}
+
+.hero__cta{
+  display:flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 14px 0 16px;
+}
+
+.btn{
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: var(--text);
+  padding: 12px 14px;
+  border-radius: 14px;
+  font-weight: 800;
+  letter-spacing: .2px;
+  text-decoration:none;
+  cursor:pointer;
+  transition: .18s ease;
+}
+.btn:hover{
+  transform: translateY(-1px);
+  background: var(--panel2);
+}
+.btn--primary{
+  border: 1px solid rgba(124,255,107,.35);
+  background: linear-gradient(90deg, rgba(124,255,107,.22), rgba(0,212,255,.18));
+}
+.btn--ghost{
+  background: transparent;
+}
+
+.stats{
+  display:flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.stat{
+  flex: 1 1 160px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.04);
+  padding: 12px 12px;
+  border-radius: var(--radius);
+}
+.stat__num{ display:block; font-weight: 900; }
+.stat__label{ display:block; color: var(--muted); font-size: 13px; margin-top: 2px; }
+
+.hero__card{
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.05);
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: var(--shadow);
+}
+.hero__card h2{
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+.steps{
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+  line-height: 1.65;
+}
+.note{
+  margin-top: 12px;
+  border: 1px dashed rgba(124,255,107,.35);
+  background: rgba(124,255,107,.08);
+  border-radius: 14px;
+  padding: 10px 12px;
+  color: rgba(255,255,255,.86);
+}
+
+.section{
+  padding: 44px 0;
+}
+.section--dark{
+  background: rgba(255,255,255,.03);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.section__head{
+  margin-bottom: 18px;
+}
+.section__head h2{
+  margin: 0 0 8px;
+  font-size: 26px;
+}
+.section__head p{
+  margin: 0;
+  color: var(--muted);
+  max-width: 75ch;
+  line-height: 1.6;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+.card{
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.05);
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.28);
+}
+.card h3{ margin: 0 0 8px; }
+.card p{ margin: 0; color: var(--muted); line-height: 1.6; }
+
+.form{
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.05);
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: var(--shadow);
+}
+.grid{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+.field{
+  display:flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+.field span{
+  font-weight: 800;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.85);
+}
+input, select, textarea{
+  width: 100%;
+  padding: 12px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.16);
+  background: rgba(0,0,0,.25);
+  color: var(--text);
+  outline: none;
+}
+input:focus, select:focus, textarea:focus{
+  border-color: rgba(0,212,255,.45);
+  box-shadow: 0 0 0 3px rgba(0,212,255,.12);
+}
+textarea{ resize: vertical; }
+
+.form__actions{
+  display:flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.fineprint{
+  margin: 12px 0 0;
+  color: rgba(255,255,255,.60);
+  font-size: 12.5px;
+  line-height: 1.45;
+}
+
+.footer{
+  padding: 26px 0 40px;
+}
+.footer__grid{
+  display:grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 16px;
+  align-items: start;
+}
+.footer__brand{
+  display:flex;
+  gap: 10px;
+  align-items:center;
+}
+.footer__logo{
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+}
+.footer__name{
+  margin: 0;
+  font-weight: 900;
+}
+.footer__tag{
+  margin: 3px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.footer__cert{
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.04);
+  border-radius: var(--radius);
+  padding: 14px;
+}
+.cert__title{
+  margin: 0 0 6px;
+  font-weight: 900;
+}
+.cert__text{
+  margin: 0 0 10px;
+  color: var(--muted);
+  line-height: 1.55;
+}
+.cert__small{
+  margin: 0;
+  color: rgba(255,255,255,.60);
+  font-size: 12.5px;
+}
+
+.reclamo-vehiculos {
+  margin-top: 3rem;
+}
+
+.reclamo-title {
+  color: #7cffb2;
+  font-size: 1.6rem;
+  margin-bottom: 0.3rem;
+}
+
+.reclamo-subtitle {
+  color: #bfcac4;
+  margin-bottom: 1.8rem;
+}
+
+.vehiculos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.4rem;
+}
+
+.vehiculo-card {
+  background: linear-gradient(180deg, rgba(0,255,160,0.07), rgba(0,0,0,0.7));
+  border-radius: 16px;
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid rgba(0,255,160,0.25);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.vehiculo-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 35px rgba(0,0,0,0.6);
+}
+
+.vehiculo-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 0.8rem;
+}
+
+.vehiculo-card h4 {
+  color: #eafff2;
+  margin: 0.4rem 0;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  margin-bottom: 0.8rem;
+}
+
+.tag.auto {
+  background: rgba(0,255,160,0.15);
+  color: #7cffb2;
+}
+
+.tag.moto {
+  background: rgba(0,200,255,0.15);
+  color: #7cdcff;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 920px){
+  .hero__grid{ grid-template-columns: 1fr; }
+  .cards{ grid-template-columns: 1fr; }
+  .grid{ grid-template-columns: 1fr; }
+  .footer__grid{ grid-template-columns: 1fr; }
+  .menu{ gap: 6px; }
+  .menu a{ padding: 8px 8px; }
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .vehiculos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Móviles */
+@media (max-width: 600px) {
+  .vehiculos-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
