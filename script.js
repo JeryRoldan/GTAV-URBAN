@@ -27,6 +27,46 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // ===============================
+// AGREGAR USUARIO DE ROCKSTAR
+// ===============================
+
+function buscarRockstar() {
+  const input = document.getElementById("rockstarUser");
+  const msg = document.getElementById("rockstarMsg");
+  const user = input.value.trim().toLowerCase();
+
+  if (!user) {
+    mostrarMensaje("Ingresa tu usuario de Rockstar.", "error");
+    return;
+  }
+
+  let registrados = JSON.parse(localStorage.getItem("rockstarRegistrados")) || [];
+
+  if (registrados.includes(user)) {
+    mostrarMensaje("Este usuario ya está registrado.", "error");
+    return;
+  }
+
+  registrados.push(user);
+  localStorage.setItem("rockstarRegistrados", JSON.stringify(registrados));
+
+  mostrarMensaje("Usuario registrado correctamente.", "success");
+
+  // Abrir búsqueda Rockstar
+  const url = `https://socialclub.rockstargames.com/search?query=${encodeURIComponent(user)}`;
+  window.open(url, "_blank");
+
+  input.value = "";
+}
+
+function mostrarMensaje(texto, tipo) {
+  const msg = document.getElementById("rockstarMsg");
+  msg.textContent = texto;
+  msg.className = `rockstar-msg ${tipo}`;
+}
+
+
+// ===============================
 // ENVÍO A WHATSAPP
 // ===============================
 function enviarWhatsApp(e) {

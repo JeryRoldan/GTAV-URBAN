@@ -17,12 +17,6 @@
         <img class="brand__logo" src="logo-urban.png" alt="Urban Legacy Clan Logo" />
         <span class="brand__name">Urban Legacy Clan</span>
       </a>
-
-      <nav class="menu" aria-label="Menú principal">
-        <a href="#inicio">Inicio</a>
-        <a href="#sobre">Sobre nosotros</a>
-        <a href="#contacto">Contacto</a>
-      </nav>
     </div>
   </header>
 
@@ -36,14 +30,34 @@
           Comunidad enfocada en organización, respeto y actividades dentro de GTA V. 
           Completa el formulario y te contactamos por WhatsApp para tu ingreso.
         </p>
+
+       <!-- Agregar usuario de Rockstar-->
+
+       <section class="rockstar-search">
+        <h3> INGRESA TU USUARIO DE ROCKSTAR </h3>
+        <div class="rockstar-form">
+          <input 
+          type="text"
+          placeholder="Usuario: pepito_3312"
+          id="rockstarUser"
+          >
+          <button type="button" onclick="buscarRockstar()">
+            
+            AGREGAR
+
+          </button>
+        </div>
+        <p id="rockstarMsg" class="rockstar-msg"></p>
+       </section>
+
        <!-- Agregar el reclamo de autos Super, etc-->
         <section class="reclamo-vehiculos">
-          <h2 class="reclamo-title"> Reclamo de Vehículos</h2>
-          <p class="reclamo-subtitle">
-            Autos Super, Motos y Mansiones disponibles. 
-          </p>
+         <h2 class="reclamo-title">Reclamo de Vehículos</h2>
+         <p class="reclamo-subtitle">
+              Autos Super, Motos y Mansiones disponibles.
+         </p>
 
-          <section class="reclamo-vehuiculos wide">
+          <div class="vehiculos-grid">
 
              <!-- Vehiculos 1 -->
 
@@ -235,51 +249,99 @@
                <img src="img/heli5.jpeg" alt="">
                
                <a href="URL_AQUI_LUEGO" class="btn btn--primary">Reclamar</a>
-               </div>
-
-
-          </section>
+              </div>     
 
           </div>
+        </section>
 
 
-
-
-
-        <div class="hero__cta">
-          <a class="btn btn--primary" href="#contacto">Postular ahora</a>
-          <a class="btn btn--ghost" href="#funcionamiento">Cómo funciona</a>
-        </div>
-
-        <div class="stats">
-          <div class="stat">
-            <span class="stat__num">RP / Crew</span>
-            <span class="stat__label">Actividades</span>
-          </div>
-          <div class="stat">
-            <span class="stat__num">Respeto</span>
-            <span class="stat__label">Regla base</span>
-          </div>
-          <div class="stat">
-            <span class="stat__num">PC</span>
-            <span class="stat__label">Versión Legacy</span>
-          </div>
-        </div>
+        
+      </div>
       </section>
 
-      <aside class="hero__card" aria-label="Panel informativo">
-        <h2 id="funcionamiento">Funcionamiento</h2>
-        <ol class="steps">
-          <li><b>Postulación:</b> completas el formulario con tus datos.</li>
-          <li><b>Validación:</b> revisamos tu perfil y plataforma (PC Legacy).</li>
-          <li><b>Contacto:</b> te respondemos por WhatsApp con pasos y reglas.</li>
-          <li><b>Ingreso:</b> coordinación de Discord / social y primera actividad.</li>
-        </ol>
+      <!-- ACTUALIZACIONES GTA V -->
+<section id="actualizaciones" class="section section--dark">
+  <div class="container post">
 
-        <div class="note">
-          <b>Importante:</b> No envíes datos sensibles. Solo lo necesario para coordinar tu ingreso.
+    <header class="post-header">
+      <span class="tag">GTA V • GTA Online • 2026</span>
+      <h2>GTA V 2026: actualizaciones, eventos y novedades semanales</h2>
+      <p class="intro">
+        Guía actualizada de GTA Online con eventos activos, cambios de parches,
+        recompensas, vehículos y contenido semanal para PC.
+      </p>
+    </header>
+
+    <!-- SECCIÓN 1 -->
+    <section class="post-section">
+      <h3>Agenda GTA Online 2026</h3>
+      <p>
+        Rockstar mantiene eventos semanales con bonificaciones, vehículos en oferta
+        y recompensas especiales por tiempo limitado.
+      </p>
+
+      <div class="grid-2">
+        <div class="card card--success">
+          <h4>Ventajas</h4>
+          <ul>
+            <li>Bonos x2 y x3 GTA$ y RP</li>
+            <li>Eventos rápidos y accesibles</li>
+            <li>Rotación semanal constante</li>
+          </ul>
         </div>
-      </aside>
+
+        <div class="card card--danger">
+          <h4>Desventajas</h4>
+          <ul>
+            <li>Eventos limitados por tiempo</li>
+            <li>Algunas recompensas requieren nivel</li>
+            <li>Reinicio semanal obligatorio</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- IMAGEN -->
+    <div class="post-media">
+      <img src="img/eventosgta.jpeg" alt="Eventos GTA Online">
+    </div>
+
+    <!-- SECCIÓN 2 -->
+    <section class="post-section">
+      <h3>Novedades del parche</h3>
+      <ul class="checklist">
+        <li>Optimización de tiempos de carga</li>
+        <li>Ajustes a misiones y golpes</li>
+        <li>Nuevos vehículos y descuentos</li>
+        <li>Corrección de bugs comunes</li>
+      </ul>
+    </section>
+
+    <!-- SECCIÓN 3 -->
+    <section class="post-section highlight">
+      <h3>Recompensas y eventos activos</h3>
+
+      <div class="grid-3">
+        <div class="reward-card">
+          <span class="badge">x2 GTA$</span>
+          <h4>Carreras callejeras</h4>
+        </div>
+
+        <div class="reward-card">
+          <span class="badge">Vehículo</span>
+          <h4>Auto gratis semanal</h4>
+        </div>
+
+        <div class="reward-card">
+          <span class="badge">RP</span>
+          <h4>Misiones especiales</h4>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</section>
+
     </div>
   </main>
 
@@ -293,22 +355,38 @@
         </p>
       </div>
 
-      <div class="cards">
-        <article class="card">
-          <h3>Valores</h3>
-          <p>Respeto, comunicación clara y cero toxicidad. La comunidad crece con reglas y consistencia.</p>
-        </article>
+      <div class="cards social-cards">
 
-        <article class="card">
-          <h3>Actividades</h3>
-          <p>Rutas, eventos, misiones, entrenamientos, apoyo en sesiones y coordinación por Discord.</p>
-        </article>
+  <!-- Perfil Instagram Oficial -->
+  <a
+    href="https://www.instagram.com/gtav_online26ymas?igsh=empnaHo1eXU5ZDhn"
+    target="_blank"
+    class="card social-profile"
+  >
+    <img src="img/ig.jpeg" alt="Instagram Oficial">
+    <div class="profile-info">
+      <h3>@gtav_online26ymas</h3>
+      <p>Siguenos para mas contenidos de Video Juegos 🎮</p>
+    </div>
+  </a>
 
-        <article class="card">
-          <h3>Requisitos</h3>
-          <p>PC, GTA V versión Legacy, actitud colaborativa y disponibilidad para coordinar por chat.</p>
-        </article>
-      </div>
+  <!-- Perfil Instagram Comunidad -->
+  <a
+    href="https://www.instagram.com/chesman_20?igsh=MTBnMTU3anRyejJvMw=="
+    target="_blank"
+    class="card social-profile"
+  >
+    <img src="img/ig.jpeg" alt="Instagram Comunidad">
+    <div class="profile-info">
+      <h3>@chesman_20</h3>
+      <p>Siguenos para mas contenidos de Video Juegos 🎮</p>
+    </div>
+  </a>
+
+</div>
+
+    
+      
     </div>
   </section>
 
@@ -377,6 +455,7 @@
   <!-- FOOTER / CERTIFICADO -->
   <footer class="footer">
     <div class="container footer__grid">
+
       <div>
         <div class="footer__brand">
           <img class="footer__logo" src="logo-urban.png" alt="Urban Legacy Clan Logo" />
@@ -388,10 +467,18 @@
       </div>
 
       <div class="footer__cert">
+        <!-- ENLACES LEGALES -->
+        <div class="footer__links">
+          <a href="politica-privacidad.html">Política de privacidad</a>
+          <a href="terminos-condiciones.html">Términos y condiciones</a>
+          <a href="soporte.html">Soporte</a>
+        </div>
         <p class="cert__title">Certificado</p>
         <p class="cert__text">
           Sitio informativo oficial de la comunidad Urban Legacy Clan. 
-          Diseño responsive compatible con Android, iOS y tablets.
+        </p>
+        <p class="cert__text">
+          GTA es una marca registrada de Rockstar Games. Este sitio no esta asociado con Rockstar.
         </p>
         <p class="cert__small">© <span id="year"></span> Urban Legacy Clan. Todos los derechos reservados.</p>
       </div>
