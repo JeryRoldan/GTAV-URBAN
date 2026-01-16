@@ -724,4 +724,21 @@ textarea{ resize: vertical; }
   }
 }
 
+@media (min-width: 1024px) {
+
+  .hero__content h1{
+    text-align: center;
+  }
+
+  .hero__content .lead{
+    max-width: 680px;      /* controla el ancho del texto */
+    margin: 0 auto;        /* lo centra */
+    text-align: center;
+    line-height: 1.7;
+    font-size: 1.05rem;
+  }
+
+}
+
+
 
