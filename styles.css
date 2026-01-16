@@ -87,7 +87,8 @@ body{
   display:grid;
   grid-template-columns: 1.3fr .9fr;
   gap: 18px;
-  align-items: stretch;
+  align-items: center;
+  text-align: center;
 }
 
 .badge{
@@ -128,6 +129,18 @@ h1{
   flex-wrap: wrap;
   margin: 14px 0 16px;
 }
+.hero__content{
+  width: 100%;
+  max-width: 900px;         /* 👈 evita que se estire demasiado */
+  margin: 0 auto;
+}
+
+.hero__cta,
+.stats,
+.rockstar-search{
+  justify-content: center;
+}
+
 
 .btn{
   border: 1px solid var(--line);
@@ -290,13 +303,17 @@ textarea{ resize: vertical; }
   display:grid;
   grid-template-columns: 1fr 1.2fr;
   gap: 16px;
-  align-items: start;
+  flex-direction: column;   /* 👈 una sola columna */
+  align-items: center; 
 }
 .footer__brand{
-  display:flex;
-  gap: 10px;
-  align-items:center;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+  text-align: center;
 }
+
 .footer__logo{
   width: 44px;
   height: 44px;
@@ -317,6 +334,7 @@ textarea{ resize: vertical; }
   background: rgba(255,255,255,.04);
   border-radius: var(--radius);
   padding: 14px;
+  max-width: 640px;  
 
   /* 👇 CENTRADO */
   text-align: center;
@@ -356,6 +374,7 @@ textarea{ resize: vertical; }
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.4rem;
+  justify-items: center;
 }
 
 .vehiculo-card {
@@ -664,6 +683,45 @@ textarea{ resize: vertical; }
   .footer__grid{ grid-template-columns: 1fr; }
   .menu{ gap: 6px; }
   .menu a{ padding: 8px 8px; }
+}
+
+/* ===============================
+   HERO CENTRADO SOLO EN PC
+   =============================== */
+@media (min-width: 1024px) {
+
+  .hero__grid{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero__content{
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  /* Formulario Rockstar */
+  .rockstar-search{
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .rockstar-search input{
+    text-align: center;
+  }
+
+  /* Botones CTA */
+  .hero__cta{
+    justify-content: center;
+  }
+
+  /* Grid de vehículos */
+  .vehiculos-grid{
+    justify-items: center;
+  }
 }
 
 
